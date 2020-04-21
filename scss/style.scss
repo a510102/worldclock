@@ -1,0 +1,80 @@
+@import 'reset';
+
+// var
+
+$font-s : 16px;
+$font-m : 36px;
+$font-l : 72px;
+
+
+@mixin flexCen{
+  display: flex;
+  justify-content: center;
+}
+
+@mixin  box{
+  width: 540px;
+  height: 104px;
+  border: 2px solid #000000;
+}
+
+// layout
+
+.wrap {
+  margin: 0 auto;
+  width: 1280px;
+  height: 800px;
+  background:  #E5E5E5 0% 0% no-repeat padding-box;
+  @include flexCen();
+  font-family: Open Sans;
+}
+
+.clockarea {
+  margin-top: 72px;
+  .clock-content{
+    margin-top: 50px;
+  }
+}
+
+.clock-title{
+  @include flexCen();
+  align-items: center;
+  width: 535px;
+  height: 98px;
+  text-align: left;
+  font-weight: ExtraBold;
+  font-size: $font-l;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 1;
+  border-top: 10px solid #000000;;
+  border-bottom: 10px solid #000000;
+}
+
+.clock-box {
+  @include box();
+  font-weight: bold;
+  @include flexCen();
+  justify-content: space-between;
+  align-items: center;
+  .clock-place{
+    margin-left: 40px;
+    .clock-place-title{
+      font-size: $font-m;
+      
+    }
+    .clock-day{
+      font-size: $font-s;
+    }
+  }
+  .clock-time{
+    margin-right: 40px;
+    width: 185px;
+    font-size: $font-l;
+  }
+}
+
+.black{
+  background: #000;
+  color: #fff;
+}
