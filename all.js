@@ -8,14 +8,14 @@ for(let i = 0; i<local.length;i++){
 clockContent.innerHTML =  str;
 
 function getworldtime(area){
-  console.log(area)
   let now = new Date(Date.now()) ;
  
-  let time = now.toLocaleString('en-US', {timeZone: area,timeStyle: 'short' , hour12: false });
+  let time = now.toLocaleString('en-US', {timeZone: area,hour: 'numeric' , minute:'numeric' ,  hour12: false });
 
   let month = now.toLocaleString('en-US', {timeZone: area,year: 'numeric', month: 'short'});
 
   let day = now.toLocaleString('en-US', {timeZone: area,day:'numeric'});
+  console.log(time);
   let black = '';
   switch(true){
     case area === 'America/New_York':
